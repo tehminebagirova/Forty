@@ -1,0 +1,21 @@
+footer{
+    background-color: #0e756e;
+    padding: 30px 0;
+
+    .footer-location{
+        display: flex;
+        justify-content: space-between;
+        width:fit-content;
+
+        span{
+            margin-right: 10px;
+        }
+    }
+
+    .note{
+        margin-top: 10px;
+        p{
+            font-size:12px;
+        }
+    }
+}

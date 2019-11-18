@@ -1,0 +1,66 @@
+//wallpaper section
+#wallpaper-section {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    height: 100vh;
+    transition:$tr;
+    opacity: 1;
+    transform: scaleX(1);
+
+
+    .wallpaper-section-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.61);
+        z-index: -99;
+    }
+
+    .wallpaper-section-txts {
+        z-index: 999;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 3.25em;
+            color: white;
+            border-bottom: 2px white solid;
+            width: 50%;
+            line-height: 2.3;
+
+            @media (max-width:991.9px) {
+                width: 65%;
+                line-height: 1.3;
+            }
+
+            @media (max-width:768.9px) {
+                font-size: 2.20em;
+                width: fit-content;
+                border: none;
+            }
+        }
+
+        p {
+            color: white;
+
+            @media (max-width:768.9px) {
+                font-size: 13px;
+            }
+        }
+
+
+    }
+
+    &.active{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+}

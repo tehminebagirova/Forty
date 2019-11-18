@@ -1,0 +1,175 @@
+#header {
+
+    .navbar-forty {
+        padding: 20px 0;
+        position: fixed;
+        left: 0;
+        top:0;
+        width: 100%;
+        transition:$tr;
+
+        .child-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .right-section-nav {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        //logo
+        .logo_forty {
+            strong {
+                color: #242943;
+                background-color: white;
+                padding: 10px;
+            }
+        }
+
+        //r i g h t   s e c t i o n   n a v
+        //t o g g l e   m e n u   b u t t o n
+        .txt-toggle-menu span {
+            color: white;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+
+        //toggle menu button
+        #toggleMenu {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+            z-index: 99;
+
+            span {
+                transition: $tr;
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: white;
+                transform: translateY(0) rotate(0deg);
+
+                &:nth-child(2) {
+                    opacity: 1;
+                    margin: 3px 0;
+                }
+            }
+
+            &.active {
+                span {
+                    &:first-child {
+                        transform: translateY(4px) rotate(45deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        transform: translateY(-6px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+
+        //TOGGLE MENU
+        .toggle-menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color:#095550dc;
+            display: none;
+            z-index: 98;
+
+            .toggle-inner {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            //MENU
+            .menu {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    margin: 20px;
+
+                    a {
+                        color: white;
+                        font-size: 20px;
+                        display: block;
+                        text-align: center;
+                        transition: $tr;
+                        text-shadow: 1px 1px 1px 1px white;
+
+                        &:hover {
+                            text-shadow: 2px 3px 9px white;
+                        }
+
+                        @media (max-width:768.9px) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    @media (max-width:768.9px) {
+                        margin: 20px 0;
+                    }
+                }
+
+                span {
+                    height: 1px;
+                    width: 390px;
+                    background: white;
+                    display: block;
+
+                    @media (max-width:768.9px) {
+                        width: 150px;
+                    }
+
+                }
+            }
+
+            //MENU BUTTONS
+            .menu-buttons {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    margin: 15px;
+
+                    a {
+                        padding: 15px;
+                        font-size: 20px;
+                        width: 400px;
+                        color:$green;
+                        text-align: center;
+                        background: white;
+                        transition: .3s;
+                        display: block;
+                        border-radius: 5px;
+
+                        &:hover {
+                            box-shadow: 1px 1px 15px white;
+                        }
+
+                        @media (max-width:768.9px) {
+                            width: 200px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

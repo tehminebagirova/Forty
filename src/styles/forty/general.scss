@@ -1,0 +1,354 @@
+$tr: .4s;
+$green:#095550;
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+body {
+    transition: $tr;
+}
+
+//get started and wallpaper section button
+.wp-sc-bt {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    transition: $tr;
+    padding: 10px;
+    //position: relative;
+    cursor: pointer;
+    //z-index: -1;
+
+
+    span {
+        color: white;
+        transition: $tr;
+        letter-spacing: 2;
+
+        @media (max-width:768.9px) {
+            font-size: 12px;
+        }
+
+    }
+
+    svg {
+        height: 25px;
+        width: 22px;
+        position: absolute;
+        left: 7%;
+        opacity: 0;
+        transition: $tr;
+
+        .st0 {
+            fill: none;
+            stroke: white;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st1 {
+            fill: none;
+            stroke: white;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+    }
+
+    &:hover {
+        //background-color: white;
+        border: 1px solid rgba(255, 255, 255, 0);
+
+        svg {
+            left: 12%;
+            opacity: 1;
+
+            @media (max-width:1199.9px) {
+                left: 18%;
+            }
+        }
+    }
+}
+
+.menu-buttons li a {
+    cursor: pointer;
+}
+
+//mini title
+.mini-title {
+    color: white;
+    border-bottom: 2px solid white;
+    width: 200px;
+    line-height: 2.2em;
+    font-size: 28px;
+
+    @media (max-width:767.9px) {
+        font-size: 19px;
+        width: 180px;
+    }
+}
+
+.bbt {
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+    svg {
+        height: 15px;
+        width: 15px;
+        fill: $green;
+    }
+}
+
+form {
+
+    label {
+        color: white;
+        letter-spacing: 2;
+    }
+
+
+
+    input {
+        background-color: $green;
+        border: none;
+        color: white;
+
+        &:focus {
+            box-shadow: 1px 1px 7px white;
+        }
+
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    textarea {
+        background-color: $green;
+        border: none;
+        color: white;
+
+        &:focus {
+            box-shadow: 1px 1px 15px white;
+        }
+    }
+
+    .form-buttons {
+        width: fit-content;
+        display: flex;
+
+        a {
+            display: block;
+            padding: 8px 20px;
+            border-radius: 2px;
+            font-weight: 500;
+            border: 1px solid white;
+        }
+
+        .send {
+            color: $green;
+            background-color: white;
+            margin-right: 8px;
+            transition: $tr;
+
+            &:hover {
+                box-shadow: 1px 1px 8px white;
+            }
+        }
+
+        .clear {
+            color: white;
+            transition: $tr;
+
+            &:hover {
+                background-color: white;
+                box-shadow: 1px 1px 8px white;
+                color: $green;
+            }
+        }
+    }
+
+    .or {
+        display: block;
+        text-align: center;
+        color: $green;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 55%;
+            left: 3.2%;
+            width: 195px;
+            height: 1px;
+            background-color: #095550;
+
+            @media (max-width:569.9px) {
+                width:130px;
+            }
+
+            @media (max-width:399.9px) {
+                width:70px;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 55%;
+            right: 3.2%;
+            width: 195px;
+            height: 1px;
+            background-color: #095550;
+
+            @media (max-width:569.9px) {
+                width:130px;
+            }
+
+            @media (max-width:399.9px) {
+                width:70px;
+            }
+        }
+    }
+
+    .or-second {
+        display: block;
+        text-align: center;
+        color: $green;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 63%;
+            left: 0.6%;
+            width: 195px;
+            height: 1px;
+            background-color: #095550;
+            transition:$tr;
+
+            @media (max-width:569.9px) {
+                width:130px;
+            }
+
+            @media (max-width:399.9px) {
+                width:80px;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 63%;
+            right: 0.6%;
+            width: 195px;
+            height: 1px;
+            background-color: #095550;
+            transition:$tr;
+
+            @media (max-width:569.9px) {
+                width:130px;
+            }
+
+            @media (max-width:399.9px) {
+                width:80px;
+            }
+        }
+    }
+
+    .sign-in {
+        background: $green;
+        color: white;
+        display: block;
+        padding: 5px;
+        text-align: center;
+        transition: $tr;
+        border-radius: 1px;
+
+        &:hover {
+            background-color: white;
+            box-shadow: 1px 1px 8px $green;
+            color: $green;
+        }
+    }
+
+    .buttons-contiune {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:967.9px) {
+            flex-direction: column;
+
+            .fb {
+                @media (max-width:967.9px) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .fb,
+    .ge {
+        background: white;
+        color: $green;
+        border: 1px solid $green;
+        padding: 5px 1px;
+        width:100%;
+        text-align: center;
+        display: block;
+        word-wrap: break-word;
+        margin: 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* fallback */
+        -webkit-line-clamp: 1;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+
+    .fb svg {
+        height: 20px;
+        width: 20px;
+        fill: blue;
+        margin-right: 8px;
+    }
+
+    .ge svg {
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+    }
+}
+
+.dump-class {
+    @media (max-width:967.9px) {
+        border: none;
+    }
+}
+
+.times {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    transition: $tr;
+    padding: 15px 8px;
+
+    svg {
+        fill: white;
+        height: 25px;
+        width: 45px;
+        cursor: pointer;
+    }
+}
